@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "DS-Digital-Bold";
+    src: url(fonts/DS-DIGIB.TTF);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #c5c5c5;
+}
+
+#calculator {
+    background-color: #669bbc;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 30px 0 30px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 0 #003049;
+}
+
+#calculator::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 8px;
+    background-color: #003049;
+    transform: rotate(45deg);
+    margin-left: -29px;
+    margin-top: -2px;
+    z-index: -1;
+}
+
+#calculator::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 8px;
+    background-color: #003049;
+    transform: rotate(45deg);
+    margin-left: 458px;
+    margin-top: -22px;
+    z-index: -1;
+}
+
+#calculator > .operands {
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+    background-color: #f4f1de;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 70px;
+    font-family: "DS-Digital-Bold";
+}
+
+#calculator > .operands > [data-operand-1]{
+    font-size: 40px;
+}
+
+#calculator > #btn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+#calculator > #btn-grid > button {
+    padding: 10px;
+    background-color: #F4EDED;
+    font-weight: bold;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: #FDFFFC;
+    font-size: 25px;
+}
+
+#calculator > #btn-grid > button:nth-child(2) {
+    grid-column: span 2;
+}
+
+#calculator > #btn-grid > button:last-child{
+    grid-column: span 2;
+    background-color: #FCA311;
+    border-color: #F9C846;
+}
+
+#copy {
+    font-size: 12px;
+    padding: 10px;
+    color: #FDFFFC;
+    text-align: center;
+}
